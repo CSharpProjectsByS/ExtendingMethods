@@ -30,6 +30,7 @@ namespace MetodyRozszerzające
             IntegerOptionsGB.Enabled = false;
             LetterTB.Enabled = false;
             PositionTB.Enabled = false;
+            PowValueTB.Enabled = false;
         }
 
         private void IntegerTypeRB_CheckedChanged(object sender, EventArgs e)
@@ -55,6 +56,16 @@ namespace MetodyRozszerzające
             LetterTB.Enabled = CountLettersRB.Checked;
         }
 
+        private void ShowByNByNRB_CheckedChanged(object sender, EventArgs e)
+        {
+            PositionTB.Enabled = ShowByNByNRB.Checked;
+        }
+
+        private void PowRB_CheckedChanged(object sender, EventArgs e)
+        {
+            PowValueTB.Enabled = PowRB.Checked;
+        }
+
         private void ResultButton_Click(object sender, EventArgs e)
         {
             recognizeTypeOfMainOperation();
@@ -77,17 +88,60 @@ namespace MetodyRozszerzające
 
         private void recognizeStringTypeOperation()
         {
-            throw new NotImplementedException();
+            if (CapitalizeRB.Checked)
+            {
+                ResultDisplay.Text = InputPhraseTB.Text.Capitalize();
+            }
+            else if (IsCapitalizedRB.Checked)
+            {
+                ResultDisplay.Text = InputPhraseTB.Text.IsCapitalized().ToString();
+            }
+            else if (CountWordRB.Checked)
+            {
+                ResultDisplay.Text = InputPhraseTB.Text.CountWords();
+            }
+            else if (CountLettersRB.Checked)
+            {
+                ResultDisplay.Text = InputPhraseTB.Text.CountLetters(LetterTB.Text.ToCharArray());
+            }
+            else if (ShowByNByNRB.Checked)
+            {
+                displayResultNByN();
+            }
+
+            
+        }
+
+        private void displayResultNByN()
+        {
+            ResultDisplay.Text = "";
+            StringBuilder stringBuilder = new StringBuilder();
+            foreach (var elem in InputPhraseTB.Text.Jump(Int32.Parse(PositionTB.Text)))
+            {
+                stringBuilder.Append(elem);
+                stringBuilder.Append(" ");
+            }
+            ResultDisplay.Text = stringBuilder.ToString();
         }
 
         private void reecognizeIntegerTypeOperation()
         {
-            throw new NotImplementedException();
+            if (IsOneDigitRB.Checked)
+            {
+                ResultDisplay.Text = (Int32.Parse(InputPhraseTB.Text)).IsOneDigit().ToString();
+            }
+            else if (IsNegativeRB.Checked)
+            {
+                ResultDisplay.Text = (Int32.Parse(InputPhraseTB.Text)).IsNegative().ToString();
+            }
+            else if (PowRB.Checked)
+            {
+                ResultDisplay.Text = (Int32.Parse(InputPhraseTB.Text)).Pow(Int32.Parse(PowValueTB.Text)).ToString();
+            }
         }
 
-        private void ShowByNByNRB_CheckedChanged(object sender, EventArgs e)
-        {
-            PositionTB.Enabled = ShowByNByNRB.Checked;
-        }
+       
+
+        
     }
 }

@@ -43,11 +43,12 @@
             this.CapitalizeRB = new System.Windows.Forms.RadioButton();
             this.IntegerOptionsGB = new System.Windows.Forms.GroupBox();
             this.PowRB = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.IsNegativeRB = new System.Windows.Forms.RadioButton();
             this.IsOneDigitRB = new System.Windows.Forms.RadioButton();
             this.ResultButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.ResultDisplay = new System.Windows.Forms.Label();
+            this.PowValueTB = new System.Windows.Forms.TextBox();
             this.MainOptionGB.SuspendLayout();
             this.StringOptionsGB.SuspendLayout();
             this.IntegerOptionsGB.SuspendLayout();
@@ -197,8 +198,9 @@
             // 
             // IntegerOptionsGB
             // 
+            this.IntegerOptionsGB.Controls.Add(this.PowValueTB);
             this.IntegerOptionsGB.Controls.Add(this.PowRB);
-            this.IntegerOptionsGB.Controls.Add(this.radioButton2);
+            this.IntegerOptionsGB.Controls.Add(this.IsNegativeRB);
             this.IntegerOptionsGB.Controls.Add(this.IsOneDigitRB);
             this.IntegerOptionsGB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.IntegerOptionsGB.Location = new System.Drawing.Point(21, 395);
@@ -218,17 +220,18 @@
             this.PowRB.TabStop = true;
             this.PowRB.Text = "Potęga";
             this.PowRB.UseVisualStyleBackColor = true;
+            this.PowRB.CheckedChanged += new System.EventHandler(this.PowRB_CheckedChanged);
             // 
-            // radioButton2
+            // IsNegativeRB
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(18, 62);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(159, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Czy jest ujemna?";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.IsNegativeRB.AutoSize = true;
+            this.IsNegativeRB.Location = new System.Drawing.Point(18, 62);
+            this.IsNegativeRB.Name = "IsNegativeRB";
+            this.IsNegativeRB.Size = new System.Drawing.Size(159, 24);
+            this.IsNegativeRB.TabIndex = 1;
+            this.IsNegativeRB.TabStop = true;
+            this.IsNegativeRB.Text = "Czy jest ujemna?";
+            this.IsNegativeRB.UseVisualStyleBackColor = true;
             // 
             // IsOneDigitRB
             // 
@@ -271,6 +274,13 @@
             this.ResultDisplay.Size = new System.Drawing.Size(115, 20);
             this.ResultDisplay.TabIndex = 7;
             this.ResultDisplay.Text = "Brak Wyników";
+            // 
+            // PowValueTB
+            // 
+            this.PowValueTB.Location = new System.Drawing.Point(201, 87);
+            this.PowValueTB.Name = "PowValueTB";
+            this.PowValueTB.Size = new System.Drawing.Size(60, 26);
+            this.PowValueTB.TabIndex = 6;
             // 
             // Form1
             // 
@@ -315,11 +325,12 @@
         private System.Windows.Forms.TextBox PositionTB;
         private System.Windows.Forms.GroupBox IntegerOptionsGB;
         private System.Windows.Forms.RadioButton PowRB;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton IsNegativeRB;
         private System.Windows.Forms.RadioButton IsOneDigitRB;
         private System.Windows.Forms.Button ResultButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label ResultDisplay;
+        private System.Windows.Forms.TextBox PowValueTB;
     }
 }
 
