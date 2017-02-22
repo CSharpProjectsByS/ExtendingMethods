@@ -1,0 +1,9 @@
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\bin\Debug\MetodyRozszerzające.exe.config
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\obj\Debug\MetodyRozszerzające.csprojResolveAssemblyReference.cache
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\obj\Debug\MetodyRozszerzające.Form1.resources
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\obj\Debug\MetodyRozszerzające.Properties.Resources.resources
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\obj\Debug\MetodyRozszerzające.csproj.GenerateResource.Cache
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\bin\Debug\MetodyRozszerzające.exe
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\bin\Debug\MetodyRozszerzające.pdb
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\obj\Debug\MetodyRozszerzające.exe
+D:\Programowanie\VisualProjects\MetodyRozszerzające\MetodyRozszerzające\obj\Debug\MetodyRozszerzające.pdb
